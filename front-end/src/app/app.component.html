@@ -1,1 +1,12 @@
 <p>hola</p>
+
+
+<h2>Datos de la pelicula</h2>
+
+
+
+<div *ngFor="let pelicula of peliculas; let index=index" class="pelicula-contenedor">
+  <div>pelicula {{index}}:{{pelicula.titulo}}</div>
+  <div>{{pelicula.fechalanzamiento | date:"dd/MM/yyyy"}}</div>
+  <div>{{pelicula.precio | currency}}</div>
+</div>
