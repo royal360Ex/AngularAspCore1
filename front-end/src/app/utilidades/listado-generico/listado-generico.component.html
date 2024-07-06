@@ -1,0 +1,8 @@
+<div *ngIf="!listado"><img src="https://i.gifer.com/ZKZg.gif" alt="" style="width: 100px;height: 100px;"></div>
+<div *ngIf="listado?.length===0">
+     <p>No hay listado para mostrar</p>
+</div>
+<ng-container *ngIf="listado">
+   <ng-content select="[contenido]"><!--proyeccion de contenido (recepcion)-->
+   </ng-content>
+</ng-container>

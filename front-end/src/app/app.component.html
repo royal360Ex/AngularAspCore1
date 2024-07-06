@@ -1,12 +1,16 @@
-<p>hola</p>
 
 
-<h2>Datos de la pelicula</h2>
+<!-- inicio variable de referencia de plantilla-->
+    <!--<input type="file" style="display:none" #cargador>
+    <button (click)="cargador.click()"> cargar archivo1</button> -->
+<!-- fin variable de referencia de plantilla-->
 
 
+<h2>listado de peliculas</h2>
 
-<div *ngFor="let pelicula of peliculas; let index=index" class="pelicula-contenedor">
-  <div>pelicula {{index}}:{{pelicula.titulo}}</div>
-  <div>{{pelicula.fechalanzamiento | date:"dd/MM/yyyy"}}</div>
-  <div>{{pelicula.precio | currency}}</div>
-</div>
+<app-listado-peliculas [peliculas]="peliculasEnCines"></app-listado-peliculas>
+
+
+<h2>futuros estrenos</h2>
+
+<app-listado-peliculas [peliculas]="peliculasProxEstrenos"></app-listado-peliculas>

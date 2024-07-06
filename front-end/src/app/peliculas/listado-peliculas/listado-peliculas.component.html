@@ -1,0 +1,12 @@
+
+<app-listado-generico [listado]="peliculas">
+    <ng-container contenido><!-- proyeccion de contenido (envio)-->
+        <div *ngFor="let pelicula of peliculas; let index=index" class="pelicula-contenedor">
+            <div>pelicula {{index}}:{{pelicula.titulo}}
+                <button style="margin-left:1rem;" (click)="remover(index)">Remover</button>
+            </div>
+            <div>{{pelicula.fechalanzamiento | date:"dd/MM/yyyy"}}</div>
+            <div>{{pelicula.precio | currency}}</div>
+        </div>
+    </ng-container>
+</app-listado-generico>
