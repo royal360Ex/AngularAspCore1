@@ -1,6 +1,19 @@
-<div *ngIf="!listado"><img src="https://i.gifer.com/ZKZg.gif" alt="" style="width: 100px;height: 100px;"></div>
+<div *ngIf="!listado">
+    <span #cargando>
+        <ng-content select="[cargando]"></ng-content>
+    </span>
+    <span *ngIf="!cargando.innerHTML.trim()">
+         <img src="https://i.gifer.com/ZKZg.gif" alt="" style="width: 100px;height:100px;">       
+    </span>
+</div>
 <div *ngIf="listado?.length===0">
-     <p>No hay listado para mostrar</p>
+    <span #vacio>
+        <ng-content select="[vacio]"></ng-content>
+    </span>
+    <span *ngIf="!vacio.innerHTML.trim()"> 
+        <p>No hay peliculas para mostrar</p>
+    </span>
+     
 </div>
 <ng-container *ngIf="listado">
    <ng-content select="[contenido]"><!--proyeccion de contenido (recepcion)-->

@@ -1,16 +1,19 @@
-
-
 <!-- inicio variable de referencia de plantilla-->
-    <!--<input type="file" style="display:none" #cargador>
+<!--<input type="file" style="display:none" #cargador>
     <button (click)="cargador.click()"> cargar archivo1</button> -->
 <!-- fin variable de referencia de plantilla-->
 
+<app-menu></app-menu>
+ <app-rating></app-rating>
+<div class="contenedor">
 
-<h2>listado de peliculas</h2>
+  <h2>listado de peliculas</h2>
 
-<app-listado-peliculas [peliculas]="peliculasEnCines"></app-listado-peliculas>
+  <app-listado-peliculas [peliculas]="peliculasEnCines"></app-listado-peliculas>
 
 
-<h2>futuros estrenos</h2>
+  <h2>futuros estrenos</h2>
 
-<app-listado-peliculas [peliculas]="peliculasProxEstrenos"></app-listado-peliculas>
+  <app-listado-peliculas [peliculas]="peliculasProxEstrenos"></app-listado-peliculas>
+
+</div>
