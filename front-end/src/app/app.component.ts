@@ -44,6 +44,10 @@ export class AppComponent implements OnInit {
   }
   
   title = 'front-end';
+  ocultar = false;
+  manejarRated(voto:number):void{
+     alert(voto);
+  }
   
 
 
