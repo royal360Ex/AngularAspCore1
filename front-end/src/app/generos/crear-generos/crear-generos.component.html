@@ -1,8 +1,4 @@
 
-
 <h2>Crear Genero</h2>
-<form [formGroup]="form">
-    
-</form>
 
-<button mat-flat-button color="primary" type="button" (click)="guardarCambios()">Guardar Cambios</button>
+<app-formulario-genero (submit)="guardarCambios($event)"></app-formulario-genero>

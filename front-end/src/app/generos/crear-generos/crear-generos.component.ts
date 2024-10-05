@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import {Router } from '@angular/router';
+import { primeraLetraMayuscula } from 'src/app/utilidades/validadores/primeraLetraMayuscula';
+import { generoCreacionDTO } from '../genero';
+
+
 
 @Component({
   selector: 'app-crear-generos',
@@ -9,17 +13,18 @@ import {Router } from '@angular/router';
 })
 export class CrearGenerosComponent implements OnInit {
 
-  constructor( private router:Router,private formBuilder:FormBuilder) { }
-  form:FormGroup;// conjunto de campos con sus validaciones
+  constructor( private router:Router) { }
+  
   ngOnInit(): void {
-    this.form = this.formBuilder.group({
-      nombre:''
-    });
+    
   }
 
-  guardarCambios(){
+  guardarCambios(genero:generoCreacionDTO){
     // guardar los cambios
+    console.log(genero);
     this.router.navigate(['generos/']);
   }
+
+
 
 }
